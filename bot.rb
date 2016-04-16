@@ -63,6 +63,10 @@ saybot whisper hey ... david ... you awake?"
     when /^saybot\ /
       msg = data.text.slice(7..-1)
       
+      # sanitize
+      msg = msg.gsub!(/[^0-9A-Za-z \.]/, '')
+      
+      # now build out command
       cmd = "say -a AirPlay "
       
       if msg.split.first == "whisper"
@@ -81,6 +85,7 @@ saybot whisper hey ... david ... you awake?"
       cmd += msg
       cmd += " [[slnc 5000]]"  # final pause to fix buffer from closing early
   
+      # run it
       system(cmd)
       
     end

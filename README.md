@@ -5,7 +5,7 @@ MIT LICENSE
 Big thanks to DBLOCK code at: 
 https://github.com/dblock/slack-ruby-client
 
-
+![Demo](/demo.png?raw=true "Demo")
 
 #### Misc Docker Commands
 add this to .bash_profile so each shell can talk to daemon VM

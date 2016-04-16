@@ -64,7 +64,7 @@ saybot whisper hey ... david ... you awake?"
       msg = data.text.slice(7..-1)
       
       # sanitize
-      msg = msg.gsub!(/[^0-9A-Za-z \.]/, '')
+      msg = msg.gsub(/[^0-9A-Za-z \.]/, '')
       
       # now build out command
       cmd = "say -a AirPlay "
